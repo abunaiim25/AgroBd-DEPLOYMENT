@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        REGISTRY = "mdnaiim"                                         // Your Docker Hub account
+        REGISTRY = "mdnaiim"                            // Your Docker Hub account
         IMAGE = "${REGISTRY}/agrobd-image"             // Full image path
     }
     

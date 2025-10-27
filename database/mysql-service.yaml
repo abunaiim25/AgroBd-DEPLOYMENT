@@ -5,9 +5,9 @@ metadata:
   labels:
     app: mysql
 spec:
+  ports:
+    - port: 3306       # Service exposed port
+      targetPort: 3306 # Pod/container port
+  clusterIP: None
   selector:
     app: mysql
-  ports:
-    - port: 3306
-      targetPort: 3306
-  clusterIP: None
