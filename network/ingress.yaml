@@ -4,6 +4,7 @@ apiVersion: networking.k8s.io/v1  # Kubernetes API version for networking resour
 kind: Ingress                     # This is an Ingress resource
 metadata:
   name: main-ingress               # Name of the Ingress
+  namespace: agrobd-app
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /  # Tells Nginx Ingress to rewrite all matching paths to "/"
 spec:
