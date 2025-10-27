@@ -75,10 +75,10 @@ spec:
             periodSeconds: 20
           resources:  # Resource requests and limits
             requests:
-              cpu: "100m"  # Minimum CPU
+              cpu: "200m"  # Minimum CPU
               memory: "512Mi"  # Minimum memory
             limits:
-              cpu: "500m"    # Maximum CPU
+              cpu: "1"    # Maximum CPU
               memory: "1Gi"  # Maximum memory
           volumeMounts:
             - name: storage
