@@ -1,3 +1,5 @@
+// এমন একটা টুল যেটা code build, test, deploy—সব কিছু automatically করাতে পারে।
+
 pipeline {
     agent any
     environment {
@@ -25,7 +27,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(
                     credentialsId: 'docker-creds',       // Jenkins credentials ID
-                    usernameVariable: 'DOCKER_USER',     // pipeline variable for username
+                    usernameVariable: 'mdnaiim',     // pipeline variable for username
                     passwordVariable: 'DOCKER_PASS')]) { // pipeline variable for password
                     
                     sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
