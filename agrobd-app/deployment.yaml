@@ -18,8 +18,9 @@ spec:
       serviceAccountName: laravel-sa  # ServiceAccount for RBAC permissions
       containers:
         - name: agrobd  # Container name
-          image: mdnaiim/agrobd-app:0   # Docker image to use
-          imagePullPolicy: IfNotPresent  # Pull image only if not present locally
+          #image: mdnaiim/agrobd-app:0   # Docker image to use
+          image: mdnaiim/agrobd-app:latest
+          imagePullPolicy: Always  
           ports:
             - containerPort: 9000  # Port exposed by container
           command: ["php"]
